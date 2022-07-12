@@ -10,10 +10,12 @@ function deleteByEmail() {
     let targetElement = emailElements.find(x => x.textContent == emailInputElement.value);
 
     if(targetElement){
+
         targetElement.parentElement.remove();
 
         resultElement.textContent = 'Deleted.'
     }else{
+        
         resultElement.textContent = 'Not found.'
     }
 }
