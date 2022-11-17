@@ -1,4 +1,5 @@
 function encodeAndDecodeMessages() {
+    
     let buttons = document.getElementsByTagName('button');
     let text = document.getElementsByTagName('textarea');
 
