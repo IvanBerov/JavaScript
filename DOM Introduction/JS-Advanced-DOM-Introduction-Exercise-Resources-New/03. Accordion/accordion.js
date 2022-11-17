@@ -8,8 +8,7 @@ function toggle() {
         button.textContent='Less';
 
         elementText.style.display='block';
-    }
-    else{
+    }else{
 
         button.textContent='More';
         
