@@ -8,10 +8,9 @@ function lockedProfile() {
 
         let isActive = profile.querySelector('input[value="unlock"]').checked;
 
-        if (isActive) {
+        if (isActive) { 
             
-            let info = Array.from(profile.querySelectorAll('div'))
-                            .find(pro => pro.id.includes('HiddenFields'));
+            let info = profile.querySelector('div');             
 
             if(event.target.textContent === 'Show more'){
                 event.target.textContent = 'Hide it';
