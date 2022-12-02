@@ -1,7 +1,7 @@
-function solve(arr) {
+function solve(arrax) {
     let result = [];
   
-    for (let input of arr) {
+    for (let input of arrax) {
       let [command, string] = input.split(" ");
   
       switch (command) {
