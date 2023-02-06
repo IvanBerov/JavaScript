@@ -1,0 +1,37 @@
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+
+body {
+    display: grid;
+    grid-template-areas: "first" "second";
+    grid-template-rows: 500px 500px;
+}
+
+.viewport-first {
+    grid-area: first;
+    padding: 150px;
+    background-image: linear-gradient(to right, rgb(51, 85, 147), rgb(114, 207, 151));
+}
+
+.viewport-second {
+    padding-top: calc(500px - 475px);
+    grid-area: second;
+    background-image: linear-gradient(to right, purple, orange);
+}
+
+section.card {
+    position: absolute;
+    display: block;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+img {
+    width: 300px;
+}
+
+i {
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    color: white;
+}
