@@ -1,0 +1,22 @@
+@import "https://use.fontawesome.com/releases/v6.1.2/css/all.css";
+
+ul{
+    display: inline-block;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+    padding: 30px;
+    margin: 15px;
+    background-color: darkgrey;
+    border-radius: 100%;
+}
+
+a{
+    border-radius: 50%;
+}
+
+li:hover{
+    background-color: aquamarine;
+}
