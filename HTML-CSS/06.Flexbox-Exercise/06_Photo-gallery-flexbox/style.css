@@ -1,0 +1,24 @@
+html{
+    background-color: darkgray;
+}
+
+body,
+ul,
+li {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 24px;
+}
+
+
+
+ul {
+  justify-content: space-between;
+}
+
+img {
+    background-color: white;
+  border: solid 8px black;
+  padding: 34px 24px;
+  object-fit: contain;
+}
