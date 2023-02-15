@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+
+.card{
+    background-color: rgb(255, 255, 255);
+    padding: 24px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
+}
