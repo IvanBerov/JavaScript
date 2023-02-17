@@ -1,0 +1,117 @@
+body {
+    background-color: rgb(238, 238, 238);
+    padding: 20px;
+}
+
+.page {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 80%;
+}
+
+aside {
+    display: flex;
+    flex-basis: 10%;
+    flex-direction: column;
+    padding-left: 24px;
+}
+
+.title {
+    font-size: 40px;
+    border-bottom: 2px solid black;
+    padding-bottom: 24px;
+}
+
+blockquote {
+    font-family: Georgia, serif;
+    float: right;
+    width: 40%;
+    height: 150px;
+    border-left: 1px solid darkgrey;
+    padding-left: 20px;
+}
+
+.blockquote__author{
+    text-align: right;
+}
+
+img {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border: 2px solid black;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.25);
+}
+
+.first_image{
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.second_image{
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+a {
+    color: rgb(0, 153, 0);
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+h1,
+h2 {
+    font-family: Georgia, serif;
+}
+
+@media (max-width: 1800px) {
+    html {
+        font-size: 23px;
+    }
+    
+}
+@media (max-width: 1300px) {
+    html {
+        font-size: 21px;
+    }
+
+    blockquote{
+        overflow: hidden;
+    }
+    
+}
+@media (max-width: 800px) {
+    html {
+        font-size: 13px;
+    }
+
+    blockquote{
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 600){
+    html {
+        font-size: 16px;
+    }
+
+    blockquote{
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 14px;
+    }
+
+    blockquote{
+        overflow: hidden;
+    }
+}
