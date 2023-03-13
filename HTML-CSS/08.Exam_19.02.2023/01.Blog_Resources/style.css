@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url(https://use.fontawesome.com/releases/v6.1.2/css/all.css);
+
+body {
+    padding: 32px;
+    font-family: "Montserrat";
+    background-color: #ead5ac;
+}
+
+.page {
+    display: flex;
+    background-color: #f6e0b5;
+    width: 800px;
+    padding: 24px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    overflow: hidden;
+    width: 70%;
+    gap: 12px;
+}
+
+.card {
+    background-color: #66545e;
+    font-size: 16px;
+    margin-bottom: 24px;
+    border: 2px solid black;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+    width: calc((100% - (32px * 2)) / 2);
+
+}
+
+.card a{
+    color: white;
+    font-size: 20px;
+}
+
+aside {
+    width: 28%;
+}
+
+
+
+h3{
+    text-align: center;
+    margin-right: 32px;
+
+}
+li{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #66545e;
+}
