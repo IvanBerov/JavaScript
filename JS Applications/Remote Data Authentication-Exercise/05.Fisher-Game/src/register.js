@@ -24,12 +24,10 @@ function register() {
 
         if (email && pass && rePass) {
             try {
-                const res = await fetch("http://localhost:3030/users/register", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({ email, pass }),
+                const res = await fetch('http://localhost:3030/users/register', {
+                    method: 'POST',
+                    headers: { 'Content-type': 'aplication/json' },
+                    body: JSON.stringify({ email, pass })
                 });
 
                 if (!res.ok) {
