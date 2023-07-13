@@ -1,5 +1,5 @@
 function attachEvents() {
-    document.querySelector('#refresh').addEventListener('click', dispalyComments);
+    document.querySelector('#refresh').addEventListener('click', displayComments);
     document.querySelector('#submit').addEventListener('click', addComment);
 }
 
@@ -23,7 +23,7 @@ function addComment() {
                 author: authorName.value.trim(),
                 content: content.value.trim()
             })
-        })
+    })
         .then(res => {
             if (res.ok == false) {
                 throw new Error('Error creating new record!');
@@ -37,7 +37,7 @@ function addComment() {
     content.value = '';
 }
 
-function dispalyComments() {
+function displayComments() {
 
     fetch(url)
         .then(res => {
