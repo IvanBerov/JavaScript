@@ -1,18 +1,16 @@
-console.log('TODO:// Implement Login functionality');
-
-const form = document.querySelector('form');
+const loginForm = document.querySelector('form');
 let userView = document.getElementById('user');
 let guestView = document.getElementById('guest');
 
 userView.style.display = 'none';
 guestView.style.display = 'inline-block';
 
-form.addEventListener('submit', loginUser);
+loginForm.addEventListener('submit', loginUser);
 
 async function loginUser(e) {
     e.preventDefault();
 
-    const formData = new FormData(e.target);
+    const formData = new FormData(loginForm);
 
     let email = formData.get('email');
     let password = formData.get('password');
@@ -36,7 +34,7 @@ async function loginUser(e) {
         });
 
         if (!response.ok || response.status != 200) {
-            form.reset();
+            loginForm.reset();
             throw new Error(data.message);
         }
 

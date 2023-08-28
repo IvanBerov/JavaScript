@@ -1,25 +1,25 @@
-console.log('TODO:// Implement Home functionality');
-
 function app() {
-    const accessToken = sessionStorage.getItem('accessToken');
-    const loggedUserEmail = sessionStorage.getItem('loggedUser');
+    const user = JSON.parse(sessionStorage.getItem('user'));
+    const logout = document.getElementById('logout');
+    const addBtn = document.querySelector('.add')
 
-    if (loggedUserEmail) {
-        document.querySelector('span').textContent = loggedUserEmail;
-    } else {
-        document.querySelector('span').textContent = 'guest';
+    if (!user) {
+        logout.style.display = 'none';
     }
 
-    if (accessToken) {
-        document.getElementById('login').style.display = 'none';
-        document.getElementById('register').style.display = 'none';
+    else {
+        document.querySelector("#guest").style.display = "none";
+        document.querySelector('.email span').textContent = user.email;
+        addBtn.disabled = false
+        onLoad()
+    }
 
-        document.getElementById('logout').style.display = 'inline';
-    } else {
-        document.getElementById('login').style.display = 'inline';
-        document.getElementById('register').style.display = 'inline';
+    async function onLoad() {
 
-        document.getElementById('logout').style.display = 'none';
+        const res = await fetch('http://localhost:3030/data/catches')
+        const data = await res.json();
+
+        document.getElementById("catches").replaceChildren(...data.map(createCatch));
     }
 
     document.getElementById('logout').addEventListener('click', onLogout);
