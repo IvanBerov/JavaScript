@@ -1,5 +1,9 @@
 import { page, render } from "./lib.js";
 import { getUserData } from "./util.js";
+import { showCatalog } from "./views/catalogView.js";
+import { showCreate } from "./views/createView.js";
+import { showDetails } from "./views/detailsView.js";
+import { showEdit } from "./views/editView.js";
 import { showHome } from "./views/homeView.js";
 import { showLogin } from "./views/login.js";
 import { updateNav } from "./views/nav.js";
@@ -13,10 +17,10 @@ page("/", showHome);
 page("/home", showHome);
 page("/login", showLogin);
 page("/register", showRegister);
-page("/catalog", () => console.log("catalogView"));
-page("/create", () => console.log("createView"));
-page("/detail/:id", () => console.log("detailView"));
-page("/edit/:id", () => console.log("editView"));
+page("/catalog", showCatalog);
+page("/create", showCreate);
+page("/details/:id", showDetails);
+page("/edit/:id", showEdit);
 page("/search", () => console.log("searchView"));
 
 updateNav();
