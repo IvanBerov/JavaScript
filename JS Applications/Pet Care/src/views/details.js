@@ -16,17 +16,14 @@ const detailsTemplate = (pet, hasUser, isOwner, onDelete) => html` <section
         <h4>${pet.weight}</h4>
         <h4 class="donation">Donation: 0$</h4>
       </div>
-      <!-- if there is no registered user, do not display div-->
       ${hasUser
         ? html` <div class="actionBtn">
             ${isOwner
-              ? html`<!-- Only for registered user and creator of the pets-->
-                  <a href="/edit/${pet._id}" class="edit">Edit</a>
+              ? html` <a href="/edit/${pet._id}" class="edit">Edit</a>
                   <a @click=${onDelete} href="javascript:void(0)" class="remove"
                     >Delete</a
                   >`
-              : html`<!--(Bonus Part) Only for no creator and user-->
-                  <a href="#" class="donate">Donate</a>`}
+              : html` <a href="#" class="donate">Donate</a>`}
           </div>`
         : nothing}
     </div>
