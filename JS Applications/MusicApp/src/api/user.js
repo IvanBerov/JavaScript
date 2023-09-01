@@ -26,7 +26,7 @@ export async function register(email, password) {
     _id,
     email: resultEmail,
     accessToken,
-  } = await post(endpoints.logout, { email, password });
+  } = await post(endpoints.register, { email, password });
 
   setUserData({
     _id,
